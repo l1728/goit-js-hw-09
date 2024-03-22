@@ -1,2 +1,2 @@
-import"./assets/styles-c6e5cdf8.js";console.log("Form");
+import"./assets/styles-c6e5cdf8.js";document.addEventListener("DOMContentLoaded",()=>{const r=document.querySelector(".feedback-form"),t=r.querySelector('input[name="email"]'),a=r.querySelector('textarea[name="message"]'),s="feedback-form-state",l=localStorage.getItem(s);if(l){const{email:e,message:o}=JSON.parse(l);t.value=e,a.value=o}r.addEventListener("input",e=>{if(e.target===t||e.target===a){const o={email:t.value,message:a.value};localStorage.setItem(s,JSON.stringify(o))}}),r.addEventListener("submit",e=>{e.preventDefault();const o={email:t.value,message:a.value};localStorage.removeItem(s),t.value="",a.value="",console.log("Form data:",o)})});
 //# sourceMappingURL=commonHelpers2.js.map
