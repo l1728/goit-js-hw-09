@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+
     // Отримуємо необхідні елементи форми
     const form = document.querySelector('.feedback-form');
     const emailInput = form.querySelector("input");
@@ -59,4 +59,4 @@ document.addEventListener('DOMContentLoaded', () => {
         // Очищаємо локальне сховище
         localStorage.removeItem(localStorageKey);
     };
-});
+
