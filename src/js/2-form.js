@@ -42,21 +42,20 @@
 
         // Отримуємо дані з полів форми
         const formData = {
-            email: emailInput.value,
-            message: messageInput.value
+            email: emailInput.value.trim(),
+            message: messageInput.value.trim()
         };
         // Перевіряємо, чи заповнені обидва поля форми
         if (formData.email && formData.message) {
             // Виводимо дані у консоль
             console.log("Form data:", formData);
+              // Очищаємо поля форми
+            event.currentTarget.reset();
+            // Очищаємо локальне сховище
+        localStorage.removeItem(localStorageKey);
         } else {
             alert("Будь ласка, заповніть обидва поля форми.")
         };
-
-        // Очищаємо поля форми
-        event.currentTarget.reset();
-
-        // Очищаємо локальне сховище
-        localStorage.removeItem(localStorageKey);
+        
     };
 
